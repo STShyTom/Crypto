@@ -2,6 +2,7 @@ package iutdijon.cryptomessengerclient.modele.protocoles;
 
 import iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleBrut;
 import iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleCesar;
+import iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleSubstitution;
 
 
 /**
@@ -23,6 +24,9 @@ public class FabriqueProtocole {
                 break;
             case CESAR :
                 protocole = new ProtocoleCesar();
+                break;
+            case SUBSTITUTION :
+                protocole = new ProtocoleSubstitution();
                 break;
         }
         return protocole;

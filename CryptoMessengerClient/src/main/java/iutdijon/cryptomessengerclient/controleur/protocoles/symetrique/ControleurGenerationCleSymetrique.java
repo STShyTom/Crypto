@@ -24,6 +24,7 @@ public class ControleurGenerationCleSymetrique extends Controleur {
     public void avertir() {
         switch(protocole) {
             case CESAR:  ecran.setCle(GenerateurCle.genererCleCesar());  break;
+            case SUBSTITUTION: ecran.setCle(GenerateurCle.genererCleSubstitution()); break;
         }
     }
     

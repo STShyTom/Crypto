@@ -11,7 +11,8 @@ public enum NomProtocole {
     //ENUMERATION DES PROTOCOLES
     
     BRUT("Texte brut","Brut"),
-    CESAR("Cryptogramme de César","Sym");
+    CESAR("Cryptogramme de César","Sym"),
+    SUBSTITUTION("Substitution","Sym");
     
     //--------------------------
     
