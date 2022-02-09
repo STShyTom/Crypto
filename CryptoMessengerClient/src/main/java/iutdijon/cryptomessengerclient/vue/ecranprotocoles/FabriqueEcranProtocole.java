@@ -35,6 +35,10 @@ public class FabriqueEcranProtocole {
                 if(nomEcran.equals("ENVOI")) stage.setScene(new EcranSymetriqueEnvoi(protocole));
                 if(nomEcran.equals("RECEPTION")) stage.setScene(new EcranSymetriqueReception(protocole));
 				break;
+            case TRANSPOSITION:
+                if(nomEcran.equals("ENVOI"))  stage.setScene(new EcranSymetriqueEnvoi(protocole)); 
+                if(nomEcran.equals("RECEPTION")) stage.setScene(new EcranSymetriqueReception(protocole));
+                break;
         }
         
         stage.show();

@@ -4,7 +4,7 @@ import iutdijon.cryptomessengerclient.modele.messages.Message;
 import iutdijon.cryptomessengerclient.modele.protocoles.Protocole;
 
 /**
- * Classe qui gère le protocole pour substitution
+ * Classe qui gère le protocole par substitution
  * @author tomhu
  */
 public class ProtocoleSubstitution extends Protocole{
