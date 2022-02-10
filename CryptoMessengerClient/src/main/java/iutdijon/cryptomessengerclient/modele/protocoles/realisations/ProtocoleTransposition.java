@@ -4,6 +4,7 @@ import iutdijon.cryptomessengerclient.modele.messages.Message;
 import iutdijon.cryptomessengerclient.modele.protocoles.Protocole;
 import java.nio.ByteBuffer;
 import java.security.SecureRandom;
+import java.util.ArrayList;
 
 /**
  * Classe qui gère la transposition 
@@ -46,8 +47,8 @@ public class ProtocoleTransposition extends Protocole{
             ligne = quotient;  // Le tableau aura le quotient pour nombre de lignes
         } else{
             ligne = quotient +1; // Le tableau aura le quotient +1 pour nombre de lignes pour placer tous les caractères
-            for(int bourrage = 0 ; bourrage <modulo ; bourrage++){ // Pour chaque case qui sera vide
-                message += 'x'; // On bourre avec un x
+            for(int bourrage = 0 ; bourrage < modulo ; bourrage++){ // Pour chaque case qui sera vide
+                message += bourrage(); // On bourre avec un caractère aléatoire
             }     
         }
         char[][] tab = new char[ligne][nbCle]; // Création du tableau avec le bon nombre de caractères
@@ -63,17 +64,31 @@ public class ProtocoleTransposition extends Protocole{
     
     /**
      * Méthode permettant de bourrer aléatoirement le message
-     * @return 
+     * @return Les caractères de bourrage
      */
     private char bourrage(){
-        this.generateur = new SecureRandom();
-        boolean b = generateur.nextBoolean();
+        this.generateur = new SecureRandom(); // Création du générateur 
+        boolean b = generateur.nextBoolean(); // Création d'un générateur aléatoire de booléen pour choisir entre majuscule et minuscule
         char c;
+        
         if(b){
-            c = (char) (generateur.nextInt(26)+'a');
+            c = (char) (generateur.nextInt(26)+'a'); // Minuscule
         } else{
-            c = (char) (generateur.nextInt(26)+'A');
+            c = (char) (generateur.nextInt(26)+'A'); // Majuscule
         }
         return c;
+    }
+    
+    /**
+     * Méthode qui donne l'ordre des colonnes
+     * @param cle Clé envoyée
+     * @return Une liste contenant l'ordre dans lequel lire les colonnes
+     */
+    private ArrayList<Integer> getOrdreColonne(String cle){
+        ArrayList<Integer> list = new ArrayList<>(); // Déclaration et initialisation de la liste
+        for (int i = 0; i < cle.length() ; i++){ // Pour chaque caratère de la clé
+           
+        }
+        return list;
     }
 }
