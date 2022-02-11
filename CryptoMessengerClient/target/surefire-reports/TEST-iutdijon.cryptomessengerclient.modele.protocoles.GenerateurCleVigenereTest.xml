@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="iutdijon.cryptomessengerclient.modele.protocoles.GenerateurCleTest" time="0.031" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="iutdijon.cryptomessengerclient.modele.protocoles.GenerateurCleVigenereTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
@@ -62,5 +62,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="iutdijon.cryptomessengerclient.modele.protocoles.GenerateurCleTest" name="iutdijon.cryptomessengerclient.modele.protocoles.GenerateurCleTest.testGerererCleTransposition" time="0.031"/>
+  <testcase classname="iutdijon.cryptomessengerclient.modele.protocoles.GenerateurCleVigenereTest" name="iutdijon.cryptomessengerclient.modele.protocoles.GenerateurCleVigenereTest.testGerererCleVigenere" time="0"/>
 </testsuite>

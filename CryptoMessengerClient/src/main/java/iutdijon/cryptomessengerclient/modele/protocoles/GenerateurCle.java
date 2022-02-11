@@ -50,10 +50,27 @@ public class GenerateurCle {
             
             int casse = (int)(Math.random() * 2); //Définition d'un tirage aléatoire pour décider entre majuscule et minuscule
             if(casse ==1){
-                c = (char)(rand2.nextInt(26) + 97); // Lettre minuscule
+                c = (char)(rand2.nextInt(26) + 'a'); // Lettre minuscule
             } else {
-                c = (char)(rand2.nextInt(26) + 65); // Lettre majuscule
+                c = (char)(rand2.nextInt(26) + 'A'); // Lettre majuscule
             }
+            cle += c; // On ajoute le caractère à la clé
+        }
+        return cle;
+    }
+    
+    /**
+     * Générateur d'une clé aléatoire pour le protocole de vigenère
+     * @return La chaîne de caractère représentant la clé
+     */
+    public static String genererCleVigenere(){
+        int n = (int) (5 + Math.random() * 16); // Nombre aléatoire entre 5 et 20 pour la taille de la clé
+        String cle = "";
+        char c = 0;
+        Random rand = new Random(); // Générateur aléatoire
+        
+        for(int i = 0 ; i < n ; i++){ // Pour chaque emplacement
+            c = (char)(rand.nextInt(26) + 'A'); // Tirage aléatoire d'une lettre majuscule
             cle += c; // On ajoute le caractère à la clé
         }
         return cle;

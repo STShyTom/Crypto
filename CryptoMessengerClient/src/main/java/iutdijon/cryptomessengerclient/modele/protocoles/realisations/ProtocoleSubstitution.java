@@ -12,7 +12,7 @@ public class ProtocoleSubstitution extends Protocole{
     /**
      * Méthode qui chiffre le message avec substitution
      * @param messageClair Le message de l'expéditeur
-     * @return 
+     * @return le message chiffré
      */
     @Override
     public Message chiffrer(Message messageClair) {
