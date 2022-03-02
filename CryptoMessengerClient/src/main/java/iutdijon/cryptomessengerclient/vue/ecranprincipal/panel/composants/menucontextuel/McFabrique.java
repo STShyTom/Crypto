@@ -20,9 +20,8 @@ public class McFabrique {
         ContextMenu menu = null;
         switch(protocole) {
             case BRUT: menu = new McBrut(node);  break;
-            case CESAR: case SUBSTITUTION : menu = new McSymetrique(node,protocole); break;
-            case TRANSPOSITION: menu = new McSymetrique(node,protocole); break;
-            case VIGENERE: menu = new McSymetrique(node,protocole); break;
+            case CESAR: case SUBSTITUTION: case TRANSPOSITION : case VIGENERE: menu = new McSymetrique(node,protocole); break;
+            case RLE: menu = new McSymetrique(node,protocole); break;
         }
         return menu;
     }

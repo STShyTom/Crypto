@@ -75,4 +75,15 @@ public class GenerateurCle {
         }
         return cle;
     }
+    
+    /**
+     * Générateur d'une clé aléatoire pour le protocole RLE
+     * @return La chaîne de caractères représentant la clé
+     */
+    public static String genererCleRLE(){
+        int n = (int)(2+ Math.random() * 8); // Génération d'un nombre aléatoire entre 2 et 9
+        //int n = (int)(2+ Math.random()*10000); // Génération d'un nombre aléatoire supérieur à 2 ( question 11)
+        String cle = String.valueOf(n); // Conversion de l'entier en chaîne
+        return cle;
+    }
 }
