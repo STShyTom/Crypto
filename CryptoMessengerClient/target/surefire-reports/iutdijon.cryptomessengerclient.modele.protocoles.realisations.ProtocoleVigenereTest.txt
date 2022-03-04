@@ -1,13 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleVigenereTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec <<< FAILURE!
-iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleVigenereTest.testChiffrer()  Time elapsed: 0.032 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <DVNCQBR, JOFOLNM JA XH ?> but was: <Dvncqbr, Jofolnm ja xh ?>
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1124)
-	at iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleVigenereTest.testChiffrer(ProtocoleVigenereTest.java:32)
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE!
+iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleVigenereTest.testDechiffrer()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.RuntimeException: Uncompilable source code - Erroneous tree type: org.junit.jupiter.api.Test
+	at iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleVigenereTest.testDechiffrer(ProtocoleVigenereTest.java:38)
+
+iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleVigenereTest.testChiffrer()  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.RuntimeException: Uncompilable source code - Erroneous tree type: org.junit.jupiter.api.Test
+	at iutdijon.cryptomessengerclient.modele.protocoles.realisations.ProtocoleVigenereTest.testChiffrer(ProtocoleVigenereTest.java:20)
 

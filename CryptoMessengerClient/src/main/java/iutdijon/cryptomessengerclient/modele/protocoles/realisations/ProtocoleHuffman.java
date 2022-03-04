@@ -41,7 +41,7 @@ public class ProtocoleHuffman extends Protocole {
     
     public Noeud creationArbre(HashMap<Character,Integer> mapComptageCaracteres) {
         PriorityQueue<Noeud> pq = creationListeNoeuds(mapComptageCaracteres); // Génération de la pq créée pécédemment
-        while(pq.size()>1){ // Tant qu'il reste au moins 2 éléments dans la pq
+        while(pq.size()>=2){ // Tant qu'il reste au moins 2 éléments dans la pq
             Noeud n1 = pq.poll(); // Récupération du premier noeud
             Noeud n2 = pq.poll(); // Récupération du second noeud
             String concatenation = n1.getNom() + n2.getNom(); // Obtention de la concaténation du nom des deux noeuds
@@ -63,11 +63,19 @@ public class ProtocoleHuffman extends Protocole {
     }
     
     //ETAPE 4 - Chiffrement du message
+    private String envoiDictionnaire(HashMap<Character,String> dictionnaire) {
+        String dicoChiffre = "";
+        for(Character c : dictionnaire.keySet()){ // Pour chaque caractère de la map
+            dicoChiffre += c + "|" + dictionnaire.get(c) + "|"; // Ajout du caractère et de son code au message
+        }
+        return dicoChiffre;
+    }
+    
     private String chiffrerMessage(String message,HashMap<Character,String> dictionnaire) {
         String messageChiffre = "";
         for(int i = 0 ; i < message.length();i++){
             char caractere = message.charAt(i); // On prend le caractère du message à la position i   
-            messageChiffre += dictionnaire.get(caractere); // On ajoute au fur et à mesure le code de chaque caractère
+            messageChiffre += dictionnaire.get(caractere) +  "|"; // On ajoute au fur et à mesure le code de chaque caractère
         }
         return messageChiffre;
     }
@@ -85,7 +93,8 @@ public class ProtocoleHuffman extends Protocole {
         
         HashMap<Character,String> dictionnaire = creationDictionnaire(noeud); // Création du dico
         
-        messageChiffre = chiffrerMessage(corps, dictionnaire); // Récupération du message final chiffré
+        messageChiffre = envoiDictionnaire(dictionnaire); // Ajout du dictionnaire au message
+        messageChiffre += "§" + chiffrerMessage(corps, dictionnaire); // Récupération du message final chiffré
         
         Message nouveauMessage = new Message();
         nouveauMessage.setCorpsMessage(messageChiffre);
@@ -94,7 +103,16 @@ public class ProtocoleHuffman extends Protocole {
 
     @Override
     public Message dechiffrer(Message messageChiffre) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        String corps = messageChiffre.getCorpsMessage(); // Récupération du corps du message chiffré
+        String messageDechiffre = "";
+                
+        String[] listeCaracteres = corps.split("§"); // On casse le message pour séparer le dictionnaire du message
+        for(int i =0; i<listeCaracteres.length;i++){ // Pour chaque caractère
+            
+        }
+        
+        Message nouveauMessage = new Message();
+        nouveauMessage.setCorpsMessage(messageDechiffre);
+        return nouveauMessage;
     }
-    
 }
