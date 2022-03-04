@@ -68,10 +68,10 @@ public class Noeud {
         } else {
             Noeud fils1 = this.listeFils.get(0); // Fils 1
             Noeud fils2 = this.listeFils.get(1); // Fils 2
-            fils1.code += "0"; // Ajour d'un 0 au code du premier fils
-            fils2.code += "1"; // Ajour d'un 1 au code du second fils
+            fils1.code = this.code + "0"; // Ajour d'un 0 au code du premier fils
+            fils2.code = this.code + "1"; // Ajour d'un 1 au code du second fils
             fils1.calculCode(dictionnaire); // Appel de la méthode pour le fils1
-            fils2.calculCode(dictionnaire); // Appel de la méthode pour le fils1
+            fils2.calculCode(dictionnaire); // Appel de la méthode pour le fils2
         }
     }
 }

@@ -3,7 +3,7 @@ Test set: iutdijon.cryptomessengerclient.modele.protocoles.realisations.Transpos
 -------------------------------------------------------------------------------
 Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE!
 iutdijon.cryptomessengerclient.modele.protocoles.realisations.TranspositionRemplissageTableauTest.testRemplirTableauChiffrement()  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: array contents differ at index [5][3], expected: <x> but was: <n>
+org.opentest4j.AssertionFailedError: array contents differ at index [5][3], expected: <x> but was: <d>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
 	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:432)
 	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:196)

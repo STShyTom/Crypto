@@ -41,7 +41,7 @@ public class ProtocoleHuffman extends Protocole {
     
     public Noeud creationArbre(HashMap<Character,Integer> mapComptageCaracteres) {
         PriorityQueue<Noeud> pq = creationListeNoeuds(mapComptageCaracteres); // Génération de la pq créée pécédemment
-        while(pq.size()>2){ // Tant qu'il reste au moins 2 éléments dans la pq
+        while(pq.size()>1){ // Tant qu'il reste au moins 2 éléments dans la pq
             Noeud n1 = pq.poll(); // Récupération du premier noeud
             Noeud n2 = pq.poll(); // Récupération du second noeud
             String concatenation = n1.getNom() + n2.getNom(); // Obtention de la concaténation du nom des deux noeuds
