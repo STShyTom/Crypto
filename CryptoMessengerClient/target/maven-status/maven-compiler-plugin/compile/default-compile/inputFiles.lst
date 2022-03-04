@@ -12,6 +12,7 @@ C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cr
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\modele\protocoles\realisations\ProtocoleCesar.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\controleur\protocoles\symetrique\ControleurChiffrementSymetrique.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranprincipal\composants\LabelChoisirProtocole.java
+C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\modele\protocoles\realisations\huffman\ComparateurNoeuds.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranprincipal\panel\composants\menucontextuel\McBrut.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranprincipal\panel\composants\LabelNomProtocole.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\App.java
@@ -20,9 +21,11 @@ C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cr
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\controleur\protocoles\symetrique\ControleurEnvoieSymetrique.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranprotocoles\ecrans\composants\boutons\Bouton.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranconnexion\EcranConnexion.java
+C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\modele\protocoles\realisations\ProtocoleHuffman.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranprotocoles\ecrans\composants\textzones\TextMessage.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\controleur\protocoles\brut\ControleurEnvoieBrut.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\modele\protocoles\realisations\ProtocoleRLE.java
+C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\modele\protocoles\realisations\huffman\Noeud.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranprotocoles\ecrans\ecrancompression\EcranCompressionEnvoi.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranconnexion\composants\labels\LabelTitre.java
 C:\Users\th299374\Desktop\Crypto\CryptoMessengerClient\src\main\java\iutdijon\cryptomessengerclient\vue\ecranprincipal\EcranPrincipal.java
