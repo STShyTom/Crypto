@@ -4,7 +4,11 @@ import iutdijon.cryptomessengerclient.modele.messages.Message;
 import iutdijon.cryptomessengerclient.modele.protocoles.Protocole;
 import iutdijon.cryptomessengerclient.modele.protocoles.realisations.huffman.ComparateurNoeuds;
 import iutdijon.cryptomessengerclient.modele.protocoles.realisations.huffman.Noeud;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.PriorityQueue;
 
 /**
@@ -105,14 +109,47 @@ public class ProtocoleHuffman extends Protocole {
     public Message dechiffrer(Message messageChiffre) {
         String corps = messageChiffre.getCorpsMessage(); // Récupération du corps du message chiffré
         String messageDechiffre = "";
+        HashMap<String,Character> dictionnaire = new HashMap<String,Character>(); 
                 
-        String[] listeCaracteres = corps.split("§"); // On casse le message pour séparer le dictionnaire du message
-        for(int i =0; i<listeCaracteres.length;i++){ // Pour chaque caractère
-            
-        }
+        String[] separation = corps.split("§"); // On casse le message pour séparer le dictionnaire du message
+        String dico = separation[0]; // On récupère le dictionnaire
+        String listeCaracteres = separation[1]; // On récupère le message crypté
+        
+        dictionnaire = creerDictionnaire(dico); // On crée le dictionnaire
+        messageDechiffre = creerMessage(dictionnaire,listeCaracteres); // On crée le message
         
         Message nouveauMessage = new Message();
         nouveauMessage.setCorpsMessage(messageDechiffre);
         return nouveauMessage;
+    }
+    
+    private HashMap<String,Character> creerDictionnaire(String dico){
+        HashMap<String,Character> dictionnaire = new HashMap<String,Character>();
+
+        String[] separation = dico.split("|"); // On sépare toutes les parties
+                
+        while(separation.length>0){ // Tant qu'il reste des caractères à traiter dans le dictionnaire
+            char caractere = separation[0].charAt(0); // On récupère le caractère
+            String code = separation[1]; // On récupère le code associé
+            dictionnaire.put(code, caractere); // On insère le caractère et son code dans le dictionnaire
+            List<String> list = new ArrayList<>();
+            for (int i=0; i<separation.length; i++){
+                list.add(separation[i]);
+            }
+            list.remove(1);
+            list.remove(0); // On retire les deux premiers éléments
+            list.toArray(separation); // Conversion inverse
+        }
+        return dictionnaire;    
+    }
+    
+    private String creerMessage(HashMap<String,Character> dictionnaire ,String message){
+        String messageDechiffre = "";
+        String[] separation = message.split("|"); // On sépare toutes les parties
+        for(String code : separation){ // Pour chaque code
+            char c = dictionnaire.get(code); // On récupère le caractère associé
+            messageDechiffre += c; // On ajoute le caractère au message
+        }
+        return messageDechiffre;
     }
 }
